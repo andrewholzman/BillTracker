@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    h1= title
+    p Bill Tracking App - 3651 Brotherton Rd
+
+    // Wrapper
+    #wrapper
+        // USER INFO
+        #billInfo
+            h2 Bill Info
+            p
+                strong Andy:
+                |  <a id='andy'></a>
+                br
+                strong Grant:
+                |  <a id='grant'></a> 
+                br
+                strong Ryan:
+                |  <a id='ryan'></a>
+
+                br
+                strong Pat:
+                |  <a id='pat'></a>
+                    
+        // /USER INFO
+        // BILL LIST
+        h2 Bill List
+        #billList
+            table
+                thead
+                    th Name
+                    th Amount
+                    th Amount Each
+                    th Due Date
+                    th Delete
+                tbody
+        // /BILL LIST
+        //ADD BILL
+        #addBill
+            fieldset
+                input#inputBillName(type="text", placeholder="Name")
+                input#inputBillAmount(type="number", step="0.01", placeholder="Amount")
+                input#inputDueDate(type="date",placeholder="Date")
+                br
+                button#btnAddBill Add Bill
+
+        // /ADD BILL
+
+    // /WRAPPER
